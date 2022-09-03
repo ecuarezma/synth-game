@@ -1,5 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&display=swap');
+
 :root{
   font-size: 12px;
+  font-family: 'Alumni Sans Pinstripe', sans-serif;
+}
+.title {
+  margin: 1rem auto;
+  text-align: center;
+  font-size: 4rem;
 }
 
 #board {

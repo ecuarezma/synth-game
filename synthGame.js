@@ -1,5 +1,11 @@
 const main = document.querySelector('#main');
 const board = document.querySelector('#board');
+//create header with game title
+const title = document.createElement('h1');
+title.className = "title";
+title.innerText = "selector ep";
+const header = document.querySelector('header');
+header.appendChild(title)
 
 // let's create our divs for the playing board.
 for (let i = 0; i < 3; i++){
