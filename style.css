@@ -1,0 +1,20 @@
+:root{
+  font-size: 12px;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 1rem;
+}
+.row{
+  display: flex;
+  margin: .5rem auto;
+}
+.square{
+  width: 200px;
+  height: 200px;
+  margin: 0 .5rem;
+  border: 2px solid black;
+}
