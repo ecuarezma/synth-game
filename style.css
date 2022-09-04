@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&display=swap");
 
-:root{
+:root {
   font-size: 12px;
-  font-family: 'Alumni Sans Pinstripe', sans-serif;
+  font-family: "Alumni Sans Pinstripe", sans-serif;
 }
 .title {
   margin: 1rem auto;
@@ -16,13 +16,16 @@
   flex-wrap: nowrap;
   margin: 1rem;
 }
-.row{
+.row {
   display: flex;
-  margin: .5rem auto;
+  margin: 0.5rem auto;
 }
-.square{
+.square {
   width: 200px;
   height: 200px;
-  margin: 0 .5rem;
+  margin: 0 0.5rem;
   border: 2px solid black;
+}
+.selected {
+  background-color: black;
 }
