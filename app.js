@@ -26,11 +26,11 @@ for (let i = 0; i < 3; i++) {
       console.log(e);
       sample.play();
       sample.loop = sample.loop ? false : true;
-      this.classList.add("selected");
+      // this.classList.add("selected");
     });
     newSquare.addEventListener("mouseup", function () {
       sample.loop = sample.loop ? false : true;
-      this.classList.toggle("selected");
+      // this.classList.toggle("selected");
     });
   }
 }
