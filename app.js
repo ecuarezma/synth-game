@@ -6,31 +6,37 @@ title.className = "title";
 title.innerText = "selector ep";
 const header = document.querySelector("header");
 header.appendChild(title);
-//try to connect some music here
-let sample = new Audio("./samples/phrase.wav");
-console.log(sample);
 
 // let's create our divs for the playing board.
 for (let i = 0; i < 3; i++) {
   const newRow = document.createElement("div");
   newRow.className = "row";
-  newRow.setAttribute("id", `${i}`);
+  newRow.setAttribute("class", `row ${i}`);
   board.appendChild(newRow);
   for (let j = 0; j < 3; j++) {
+    //try to connect some music here to each square
+    let sample = new Audio(`./samples/${i}${j}.wav`);
+    //finish making square grid
     const newSquare = document.createElement("div");
     newSquare.className = "square";
-    newSquare.setAttribute("id", `${j}`);
+    newSquare.setAttribute("class", `square ${i}${j}`);
     newRow.appendChild(newSquare);
-    newSquare.addEventListener("mousedown", function (e) {
-      console.log(`Clicked on square ${i}, ${j}`);
-      console.log(e);
+
+    //add event listeners for each square
+    newSquare.addEventListener("mousedown", function () {
+      let squareID = this;
+      console.log(`Clicked on square ${i}${j}`);
       sample.play();
       sample.loop = sample.loop ? false : true;
-      // this.classList.add("selected");
+      sample.addEventListener("play", function () {
+        squareID.classList.add("selected");
+      });
+      sample.addEventListener("ended", function () {
+        squareID.classList.toggle("selected");
+      });
     });
     newSquare.addEventListener("mouseup", function () {
       sample.loop = sample.loop ? false : true;
-      // this.classList.toggle("selected");
     });
   }
 }
