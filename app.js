@@ -23,20 +23,21 @@ for (let i = 0; i < 3; i++) {
     newRow.appendChild(newSquare);
 
     //add event listeners for each square
-    newSquare.addEventListener("mousedown", function () {
-      let squareID = this;
+    newSquare.addEventListener("mousedown", function (e) {
+      let selected = e.path[0];
+      console.log(selected);
       console.log(`Clicked on square ${i}${j}`);
       sample.play();
       sample.loop = sample.loop ? false : true;
       sample.addEventListener("play", function () {
-        squareID.classList.add("selected");
+        selected.classList.add("selected");
       });
       sample.addEventListener("ended", function () {
-        squareID.classList.toggle("selected");
+        selected.setAttribute("class", `square ${i}${j}`);
       });
     });
     newSquare.addEventListener("mouseup", function () {
-      sample.loop = sample.loop ? false : true;
+      sample.loop = false;
     });
   }
 }
