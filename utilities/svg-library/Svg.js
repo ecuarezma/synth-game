@@ -6,10 +6,10 @@ class Svg {
     this.svgEl = document.createElementNS(svgURI, "svg");
   }
   createViewBox() {
-    this.svgEl.setAttribute("viewBox", "0 0 100 100");
     this.svgEl.setAttribute("id", this.id);
+    this.svgEl.setAttribute("viewBox", `0 0 100 100`);
     if (this.target) {
-      console.log(this.target, " from svg class");
+      // console.log(this.target, " from svg class");
       const el = document.querySelector(this.target);
       el.appendChild(this.svgEl);
     }
@@ -26,14 +26,12 @@ class Svg {
   start = () => {
     this.onTick();
     this.timerID = setInterval(this.onTick, 20);
-    console.log(`start at ${this.duration}`);
+    // console.log(`start at ${this.duration}`);
   };
   onTick = () => {
-    console.log(
-      `${this.timeRemaining.toFixed(2)} seconds left of ${this.duration}`
-    );
-    // const radius = this.circle.getAttribute("r");
-    // let circleP = 2 * radius * Math.PI;
+    // console.log(
+    //   `${this.timeRemaining.toFixed(2)} seconds left of ${this.duration}`
+    // );
     if (this.timeRemaining <= 0) {
       this.element.setAttribute("stroke-dashoffset", this.perimeter);
       this.stop();
@@ -48,6 +46,6 @@ class Svg {
   };
   stop = () => {
     clearInterval(this.timerID);
-    console.log("stop");
+    // console.log("stop");
   };
 }

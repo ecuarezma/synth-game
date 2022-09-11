@@ -24,14 +24,18 @@
   width: 200px;
   height: 200px;
   margin: 0 0.5rem;
-  border: 2px solid black;
+  border-radius: 0.75rem;
+  overflow: hidden;
 }
 .selected {
-  background-color: black;
+  fill: transparent;
+  stroke: rgb(253, 66, 66);
+  stroke-width: 3px;
+  rx: 0.4rem;
+  ry: 0.4rem;
 }
 
 /* test */
-
-svg {
-  fill: red;
+rect {
+  fill: rgb(255, 96, 96);
 }
