@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&display=swap");
 
 :root {
-  font-size: 12px;
   font-family: "Alumni Sans Pinstripe", sans-serif;
 }
 .title {
@@ -18,24 +17,29 @@
 }
 .row {
   display: flex;
-  margin: 0.5rem auto;
+  margin: 0.4rem auto;
 }
 .square {
   width: 200px;
   height: 200px;
-  margin: 0 0.5rem;
+  margin: 0 0.4rem;
   border-radius: 0.75rem;
   overflow: hidden;
 }
 .selected {
   fill: transparent;
-  stroke: rgb(253, 66, 66);
-  stroke-width: 3px;
+  stroke: rgb(255, 96, 96);
+  stroke-width: 0.4rem;
   rx: 0.4rem;
   ry: 0.4rem;
 }
 
 /* test */
 rect {
+  transition: fill 350ms;
   fill: rgb(255, 96, 96);
+}
+
+rect:hover {
+  cursor: pointer;
 }
