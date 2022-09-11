@@ -1,20 +1,21 @@
 class Rect extends Svg {
-  constructor(width, height, target) {
+  constructor(target, width = 50, height = 25) {
     super(target);
     this.width = width;
     this.height = height;
     this.perimeter = 2 * (this.width + this.height);
+    this.createRect();
   }
-  createRect(x = 0, y = 0, rx = 0, ry = 0) {
+  createRect() {
     this.createViewBox();
     let attr = `
     <rect
-      x=${x}
-      y=${y}
+      x= 0
+      y= 0
       width=${this.width}
       height=${this.height}
-      rx = ${rx}
-      ry = ${ry}
+      rx = 0
+      ry = 0
     />`;
     this.svgEl.innerHTML = attr;
   }

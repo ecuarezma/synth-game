@@ -13,3 +13,6 @@ function createGrid() {
     }
   }
 }
+// test
+// let rect = new Rect("body", 10, 10);
+// console.log(rect);

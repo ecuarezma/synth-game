@@ -5,10 +5,11 @@ class Svg {
     const svgURI = "http://www.w3.org/2000/svg";
     this.svgEl = document.createElementNS(svgURI, "svg");
   }
-  createViewBox(yPos = 0, xPos = 0, width = 100, height = 100) {
-    this.svgEl.setAttribute("viewBox", `${yPos} ${xPos} ${width} ${height}`);
+  createViewBox() {
+    this.svgEl.setAttribute("viewBox", "0 0 100 100");
     this.svgEl.setAttribute("id", this.id);
-    if (target) {
+    if (this.target) {
+      console.log(this.target, " from svg class");
       const el = document.querySelector(this.target);
       el.appendChild(this.svgEl);
     }
