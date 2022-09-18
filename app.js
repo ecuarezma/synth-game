@@ -20,7 +20,7 @@ createGrid();
 //create event handlers
 function onSelect(target, id, shape) {
   //try to connect some music here to selected square
-  const sample = new Audio(`./samples/${id}.wav`);
+  const sample = new Audio(`./samples/tropical_sample${id}.mp3`);
   // console.log(target, id, shape);
   target.classList.add("selected");
   sample.addEventListener("loadedmetadata", function (e) {
